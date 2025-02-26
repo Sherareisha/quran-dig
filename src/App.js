@@ -1,6 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import QuranList from "./components/QuranList"; // Ganti dari SurahList ke QuranList
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import QuranList from "./components/QuranList";
+import JuzList from "./components/JuzList"; // Tambahkan JuzList
 import SurahDetail from "./components/SurahDetail";
 
 const App = () => {
@@ -10,14 +11,39 @@ const App = () => {
         <div style={styles.sidebar}>
           <h2 style={styles.sidebarTitle}>📖 Menu</h2>
           <ul style={styles.navList}>
-            <li><a href="/" style={styles.navLink}>📜 Daftar Surah</a></li>
-            <li><a href="https://example.com" target="_blank" style={styles.navLink}>🌐 Tentang</a></li>
+            <li>
+              <a
+                href="/"
+                style={styles.navLink}
+              >
+                📜 Daftar Surah
+              </a>
+            </li>
+            <li>
+              <a
+                href="/juz"
+                style={styles.navLink}
+              >
+                📖 Daftar Juz
+              </a>
+            </li>{" "}
           </ul>
         </div>
         <div style={styles.mainContent}>
           <Routes>
-            <Route path="/" element={<QuranList />} /> {/* Ganti ke QuranList */}
-            <Route path="/surah/:surahNumber" element={<SurahDetail />} />
+            <Route
+              path="/"
+              element={<QuranList />}
+            />
+            <Route
+              path="/juz"
+              element={<JuzList />}
+            />{" "}
+            {/* Tambahkan route untuk JuzList */}
+            <Route
+              path="/surah/:surahNumber"
+              element={<SurahDetail />}
+            />
           </Routes>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import React from "react";
-import SurahList from "../components/QuranList";
+import QuranList from "../components/QuranList";
 
 const Home = () => {
   return (
-    <div className="container mx-auto p-4">
-      <SurahList />
+    <div className="container p-4 mx-auto">
+      <QuranList />
     </div>
   );
 };
