@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import QuranList from "./components/QuranList";
-import JuzList from "./components/JuzList"; // Tambahkan JuzList
+import JuzList from "./components/JuzList";
 import SurahDetail from "./components/SurahDetail";
 
 const App = () => {
